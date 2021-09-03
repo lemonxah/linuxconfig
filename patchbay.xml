@@ -1,0 +1,121 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.9.4" name="patchbay">
+ <output-sockets>
+  <socket exclusive="off" client="system" type="jack-audio" name="system">
+   <plug>capture_1</plug>
+   <plug>capture_1</plug>
+  </socket>
+  <socket exclusive="off" client="Jami\ Daemon" type="jack-audio" name="Jami\ Speakers">
+   <plug>out_1</plug>
+   <plug>out_2</plug>
+  </socket>
+  <socket exclusive="off" client="REAPER" type="jack-audio" name="REAPER Audio out">
+   <plug>out1</plug>
+   <plug>out2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Microphone" type="jack-audio" name="Non\-Mixer\/Microphone 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Reaper" type="jack-audio" name="Non\-Mixer\/Reaper 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Reaper\ Mic\ out" type="jack-audio" name="Non\-Mixer\/Reaper\ Mic\ out 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Main\ Volume" type="jack-audio" name="Non\-Mixer\/Main\ Volume 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Headphones" type="jack-audio" name="Non\-Mixer\/Headphones 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Speakers" type="jack-audio" name="Non\-Mixer\/Speakers 1">
+   <plug>out\-1</plug>
+   <plug>out\-2</plug>
+  </socket>
+  <socket exclusive="off" client="PulseAudio\ JACK\ Sink" type="jack-audio" name="PulseAudio\ JACK\ Sink 1">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket exclusive="off" client="a2j" type="jack-midi" name="UMC204HD MIDI IN">
+   <plug>UMC204HD\ 192k\ \[24\]\ \(capture\)\:\ UMC204HD\ 192k\ MIDI\ 1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket exclusive="off" client="system" type="jack-audio" name="system speakers">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
+  <socket exclusive="off" client="Jami\ Daemon\-01" type="jack-audio" name="Jami\ Mic">
+   <plug>in_1</plug>
+   <plug>in_2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Headphones" type="jack-audio" name="Non\-Mixer\/Headphones 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Speakers" type="jack-audio" name="Non\-Mixer\/Speakers 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Microphone" type="jack-audio" name="Non\-Mixer\/Microphone 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+  <socket exclusive="off" client="system" type="jack-audio" name="system headphones">
+   <plug>playback_3</plug>
+   <plug>playback_4</plug>
+  </socket>
+  <socket exclusive="off" client="PulseAudio\ JACK\ Source" type="jack-audio" name="PulseAudio\ JACK\ Source 1">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Reaper\ Mic\ out" type="jack-audio" name="Non\-Mixer\/Reaper\ Mic\ out 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+  <socket exclusive="off" client="REAPER" type="jack-midi" name="REAPER MIDI IN">
+   <plug>MIDI\ Input\ 2</plug>
+  </socket>
+  <socket exclusive="off" client="a2j" type="jack-midi" name="linuxsampler">
+   <plug>LinuxSampler\ \[131\]\ \(playback\)\:\ Port\ 0</plug>
+  </socket>
+  <socket exclusive="off" client="REAPER" type="jack-audio" name="REAPER MIC IN">
+   <plug>in1</plug>
+   <plug>in2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Main\ Volume" type="jack-audio" name="Non\-Mixer\/Main\ Volume 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+  <socket exclusive="off" client="Non\-Mixer\/Reaper" type="jack-audio" name="Non\-Mixer\/Reaper 1">
+   <plug>in\-1</plug>
+   <plug>in\-2</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable type="jack-audio" input="Non\-Mixer\/Microphone 1" output="system"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Reaper 1" output="REAPER Audio out"/>
+  <cable type="jack-audio" input="PulseAudio\ JACK\ Source 1" output="Non\-Mixer\/Microphone 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Headphones 1" output="Non\-Mixer\/Microphone 1"/>
+  <cable type="jack-audio" input="REAPER MIC IN" output="Non\-Mixer\/Microphone 1"/>
+  <cable type="jack-audio" input="Jami\ Mic" output="Non\-Mixer\/Microphone 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Main\ Volume 1" output="Non\-Mixer\/Reaper 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Reaper\ Mic\ out 1" output="Non\-Mixer\/Reaper 1"/>
+  <cable type="jack-audio" input="PulseAudio\ JACK\ Source 1" output="Non\-Mixer\/Reaper\ Mic\ out 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Headphones 1" output="Non\-Mixer\/Main\ Volume 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Speakers 1" output="Non\-Mixer\/Main\ Volume 1"/>
+  <cable type="jack-audio" input="system headphones" output="Non\-Mixer\/Headphones 1"/>
+  <cable type="jack-audio" input="system speakers" output="Non\-Mixer\/Speakers 1"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Main\ Volume 1" output="PulseAudio\ JACK\ Sink 1"/>
+  <cable type="jack-midi" input="REAPER MIDI IN" output="UMC204HD MIDI IN"/>
+  <cable type="jack-midi" input="linuxsampler" output="UMC204HD MIDI IN"/>
+  <cable type="jack-audio" input="Non\-Mixer\/Main\ Volume 1" output="Jami\ Speakers"/>
+ </cables>
+</patchbay>
+

@@ -1,0 +1,5 @@
+drivers = jack,pulse,
+[jack]
+connect-ports=false
+[pulse]
+allow-moves=yes

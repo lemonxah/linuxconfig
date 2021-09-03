@@ -1,0 +1,13 @@
+[Unit]
+Description=Microphone Gate
+After=jack2.service
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=carla -n /home/lemonxah/startups/micgate.carxp
+Nice=-20
+
+[Install]
+WantedBy=default.target
+

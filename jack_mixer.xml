@@ -1,0 +1,238 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.9.4" name="jack_mixer">
+ <output-sockets>
+  <socket client="alsoft" name="alsoft" exclusive="off" type="jack-audio">
+   <plug>channel_1</plug>
+   <plug>channel_2</plug>
+  </socket>
+  <socket client="system" name="system" exclusive="off" type="jack-audio">
+   <plug>capture_1</plug>
+   <plug>capture_2</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer" exclusive="off" type="jack-audio">
+   <plug>Monitor\ L</plug>
+   <plug>Monitor\ R</plug>
+   <plug>Browser\ Out\ L</plug>
+   <plug>Browser\ Out\ R</plug>
+   <plug>Discord\ Out\ L</plug>
+   <plug>Discord\ Out\ R</plug>
+   <plug>Zoom\ Out\ L</plug>
+   <plug>Zoom\ Out\ R</plug>
+   <plug>Extra\ Out\ L</plug>
+   <plug>Extra\ Out\ R</plug>
+   <plug>Speakers\ L</plug>
+   <plug>Speakers\ R</plug>
+   <plug>Headphones\ L</plug>
+   <plug>Headphones\ R</plug>
+   <plug>Mic\ Mix\ L</plug>
+   <plug>Mic\ Mix\ R</plug>
+  </socket>
+  <socket client="Microphone\ Gate" name="Microphone Gate" exclusive="off" type="jack-audio">
+   <plug>Output\ L</plug>
+   <plug>Output\ R</plug>
+  </socket>
+  <socket client="Main\ Out" name="Main Out" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="Browser" name="Browser" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="Discord" name="Discord" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="Zoom" name="Zoom" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="Extra" name="Extra" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="REAPER" name="REAPER" exclusive="off" type="jack-audio">
+   <plug>out1</plug>
+   <plug>out2</plug>
+   <plug>out3</plug>
+   <plug>out4</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 2" exclusive="off" type="jack-audio">
+   <plug>Mic\ Mix\ L</plug>
+   <plug>Mic\ Mix\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 3" exclusive="off" type="jack-audio">
+   <plug>Speakers\ L</plug>
+   <plug>Speakers\ R</plug>
+   <plug>Headphones\ L</plug>
+   <plug>Headphones\ R</plug>
+  </socket>
+  <socket client="system" name="system" exclusive="off" type="jack-midi">
+   <plug>midi_capture_1</plug>
+   <plug>midi_capture_2</plug>
+   <plug>midi_capture_3</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer" exclusive="off" type="jack-midi">
+   <plug>midi\ out</plug>
+  </socket>
+  <socket client="system" name="Mono Mic" exclusive="off" type="jack-audio">
+   <plug>capture_1</plug>
+   <plug>capture_1</plug>
+  </socket>
+  <socket client="Microphone\ Gate" name="Microphone Gate" exclusive="off" type="jack-midi">
+   <plug>events\-out</plug>
+  </socket>
+  <socket client="a2j" name="a2j" exclusive="off" type="jack-midi">
+   <plug>Midi\ Through\ \[14\]\ \(capture\)\:\ Midi\ Through\ Port\-0</plug>
+   <plug>UMC204HD\ 192k\ \[24\]\ \(capture\)\:\ UMC204HD\ 192k\ MIDI\ 1</plug>
+   <plug>APC\ MINI\ \[28\]\ \(capture\)\:\ APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="REAPER" name="REAPER" exclusive="off" type="jack-midi">
+   <plug>MIDI\ Output\ 1</plug>
+  </socket>
+  <socket client="a2j" name="a2j 2" exclusive="off" type="jack-midi">
+   <plug>UMC204HD\ 192k\ \[24\]\ \(capture\)\:\ UMC204HD\ 192k\ MIDI\ 1</plug>
+   <plug>APC\ MINI\ \[28\]\ \(capture\)\:\ APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="a2j" name="a2j 3" exclusive="off" type="jack-midi">
+   <plug>APC\ MINI\ \[28\]\ \(capture\)\:\ APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="Midi\ Through" name="Midi Through" exclusive="off" type="alsa-midi">
+   <plug>Midi\ Through\ Port\-0</plug>
+  </socket>
+  <socket client="UMC204HD\ 192k" name="UMC204HD 192k" exclusive="off" type="alsa-midi">
+   <plug>UMC204HD\ 192k\ MIDI\ 1</plug>
+  </socket>
+  <socket client="APC\ MINI" name="APC MINI" exclusive="off" type="alsa-midi">
+   <plug>APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket client="system" name="system" exclusive="off" type="jack-audio">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+   <plug>playback_3</plug>
+   <plug>playback_4</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer" exclusive="off" type="jack-audio">
+   <plug>Mic\ L</plug>
+   <plug>Mic\ R</plug>
+   <plug>System\ Sink\ L</plug>
+   <plug>System\ Sink\ R</plug>
+   <plug>Reaper\ L</plug>
+   <plug>Reaper\ R</plug>
+   <plug>Browser\ L</plug>
+   <plug>Browser\ R</plug>
+   <plug>Discord\ L</plug>
+   <plug>Discord\ R</plug>
+   <plug>Zoom\ L</plug>
+   <plug>Zoom\ R</plug>
+   <plug>Extra\ L</plug>
+   <plug>Extra\ R</plug>
+  </socket>
+  <socket client="Microphone\ Gate" name="Microphone Gate" exclusive="off" type="jack-audio">
+   <plug>Input\ L</plug>
+   <plug>Input\ R</plug>
+  </socket>
+  <socket client="Main\ Mic" name="Main Mic" exclusive="off" type="jack-audio">
+   <plug>front\-left</plug>
+   <plug>front\-right</plug>
+  </socket>
+  <socket client="REAPER" name="REAPER" exclusive="off" type="jack-audio">
+   <plug>in1</plug>
+   <plug>in2</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 2" exclusive="off" type="jack-audio">
+   <plug>Reaper\ L</plug>
+   <plug>Reaper\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 3" exclusive="off" type="jack-audio">
+   <plug>Zoom\ L</plug>
+   <plug>Zoom\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 4" exclusive="off" type="jack-audio">
+   <plug>Browser\ L</plug>
+   <plug>Browser\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 5" exclusive="off" type="jack-audio">
+   <plug>Discord\ L</plug>
+   <plug>Discord\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 6" exclusive="off" type="jack-audio">
+   <plug>Extra\ L</plug>
+   <plug>Extra\ R</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer 7" exclusive="off" type="jack-audio">
+   <plug>System\ Sink\ L</plug>
+   <plug>System\ Sink\ R</plug>
+  </socket>
+  <socket client="system" name="system" exclusive="off" type="jack-midi">
+   <plug>midi_playback_1</plug>
+   <plug>midi_playback_2</plug>
+   <plug>midi_playback_3</plug>
+  </socket>
+  <socket client="jack_mixer" name="jack_mixer" exclusive="off" type="jack-midi">
+   <plug>midi\ in</plug>
+  </socket>
+  <socket client="Microphone\ Gate" name="Microphone Gate" exclusive="off" type="jack-midi">
+   <plug>events\-in</plug>
+  </socket>
+  <socket client="a2j" name="a2j" exclusive="off" type="jack-midi">
+   <plug>Midi\ Through\ \[14\]\ \(playback\)\:\ Midi\ Through\ Port\-0</plug>
+   <plug>UMC204HD\ 192k\ \[24\]\ \(playback\)\:\ UMC204HD\ 192k\ MIDI\ 1</plug>
+   <plug>APC\ MINI\ \[28\]\ \(playback\)\:\ APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="REAPER" name="REAPER" exclusive="off" type="jack-midi">
+   <plug>MIDI\ Input\ 1</plug>
+   <plug>MIDI\ Input\ 2</plug>
+  </socket>
+  <socket client="REAPER" name="REAPER 2" exclusive="off" type="jack-midi">
+   <plug>MIDI\ Input\ 2</plug>
+   <plug>MIDI\ Input\ 1</plug>
+  </socket>
+  <socket client="a2j" name="a2j 2" exclusive="off" type="jack-midi">
+   <plug>APC\ MINI\ \[28\]\ \(playback\)\:\ APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="Midi\ Through" name="Midi Through" exclusive="off" type="alsa-midi">
+   <plug>Midi\ Through\ Port\-0</plug>
+  </socket>
+  <socket client="UMC204HD\ 192k" name="UMC204HD 192k" exclusive="off" type="alsa-midi">
+   <plug>UMC204HD\ 192k\ MIDI\ 1</plug>
+  </socket>
+  <socket client="APC\ MINI" name="APC MINI" exclusive="off" type="alsa-midi">
+   <plug>APC\ MINI\ MIDI\ 1</plug>
+  </socket>
+  <socket client="jack_midi" name="jack_midi" exclusive="off" type="alsa-midi">
+   <plug>port</plug>
+  </socket>
+  <socket client="a2jmidid" name="a2jmidid" exclusive="off" type="alsa-midi">
+   <plug>port</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable input="REAPER" output="system" type="jack-audio"/>
+  <cable input="jack_mixer" output="Microphone Gate" type="jack-audio"/>
+  <cable input="jack_mixer 7" output="Main Out" type="jack-audio"/>
+  <cable input="jack_mixer 4" output="Browser" type="jack-audio"/>
+  <cable input="jack_mixer 5" output="Discord" type="jack-audio"/>
+  <cable input="jack_mixer 3" output="Zoom" type="jack-audio"/>
+  <cable input="jack_mixer 6" output="Extra" type="jack-audio"/>
+  <cable input="jack_mixer 2" output="REAPER" type="jack-audio"/>
+  <cable input="Main Mic" output="jack_mixer 2" type="jack-audio"/>
+  <cable input="system" output="jack_mixer 3" type="jack-audio"/>
+  <cable input="a2j 2" output="jack_mixer" type="jack-audio"/>
+  <cable input="a2j 2" output="REAPER" type="jack-audio"/>
+  <cable input="REAPER 2" output="a2j 2" type="jack-midi"/>
+  <cable input="jack_mixer" output="a2j 3" type="jack-midi"/>
+  <cable input="jack_midi" output="Midi Through" type="alsa-midi"/>
+  <cable input="a2jmidid" output="Midi Through" type="alsa-midi"/>
+  <cable input="jack_midi" output="UMC204HD 192k" type="alsa-midi"/>
+  <cable input="a2jmidid" output="UMC204HD 192k" type="alsa-midi"/>
+  <cable input="jack_midi" output="APC MINI" type="alsa-midi"/>
+  <cable input="a2jmidid" output="APC MINI" type="alsa-midi"/>
+  <cable input="jack_mixer 7" output="alsoft" type="jack-audio"/>
+  <cable input="Microphone Gate" output="Mono Mic" type="jack-audio"/>
+ </cables>
+</patchbay>
+

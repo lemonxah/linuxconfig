@@ -1,0 +1,13 @@
+[Unit]
+Description=Sound setup with Jack
+After=jack2.service
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=jack_mixer --config /home/lemonxah/.local/share/jack_mixer/lemonxah.xml
+Nice=-20
+
+[Install]
+WantedBy=default.target
+
